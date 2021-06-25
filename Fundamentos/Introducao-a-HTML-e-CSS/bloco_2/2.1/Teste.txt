@@ -3,10 +3,4 @@ O que eu vou aprender na Trybe:
 - Unix
 - Bash
 - Git
-<<<<<<< HEAD
-- Java Script
-=======
-- HTML
-- CSS
-- Java Script
->>>>>>> 9f26e900828db4191e31ef2f4a180a3ce3926ee7
+
