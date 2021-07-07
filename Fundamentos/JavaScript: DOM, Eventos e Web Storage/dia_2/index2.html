@@ -60,6 +60,7 @@
       let h1 = document.createElement("h1");
       document.body.appendChild(h1);
       h1.innerHTML = "Exercício 5.2 - JavaScript DOM";
+      h1.className = "title";
 
       let div = document.createElement("div");
       document.body.appendChild(div);
@@ -96,12 +97,27 @@
 
       let h3 = document.createElement("h3");
       div.appendChild(h3);
+      h3.className = "description";
       
       let h4 = document.createElement("h3");
       div.appendChild(h4);
+      h4.className = "description";
 
       let h5 = document.createElement("h3");
       div.appendChild(h5);
+      h5.className = "description";
+
+      const div22 = document.querySelector('.left-content');
+      div.removeChild(div22);
+
+      const divRightContent = document.querySelector('.right-content');
+      divRightContent.style.marginRight='auto';
+
+      const divCenterContent = document.querySelector('.center-content');
+      divCenterContent.parentNode.style.backgroundColor = 'green';
+
+      ul.lastChild.remove();
+      ul.lastChild.remove();
 
     </script>
   </body>
