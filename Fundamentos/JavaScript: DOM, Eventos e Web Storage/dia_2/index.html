@@ -22,6 +22,17 @@
       <script>
          document.getElementById("elementoOndeVoceEsta").parentNode.style.color = "brown";
          document.getElementById("primeiroFilhoDoFilho").innerText = "Texto 1º filho";
+         
+         const pai = document.getElementById("pai");
+         const novo = document.createElement("div");
+         novo.id = "irmaoNovo";
+         pai.appendChild(novo);
+
+         const pai2 = document.getElementById("elementoOndeVoceEsta");
+         const novoFilho = document.createElement("div");
+         novoFilho.id = "novoFilho";
+         pai2.appendChild(novoFilho);
+
 
       </script>
 </body>
