@@ -4,20 +4,31 @@ const thirdDiv = document.getElementById('third-div');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
-/*
- Copie esse arquivo e edite apenas ele;
- Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
- Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-com a classe 'tech';
- Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-redirecione para alguma página;
-1. Que tal redirecionar para seu portifólio?
- Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-a cor do mesmo;
+firstDiv.addEventListener("click", clickTech);
+secondDiv.addEventListener("click", clickTech);
+thirdDiv.addEventListener("click", clickTech);
+input.addEventListener("keyup", function(evento) {
+    const change1 = document.getElementsByClassName("tech");
+    change1[0].innerHTML = evento.target.value;
+})
+myWebpage.addEventListener("dblclick", function(){
+    window.open('https://blog.betrybe.com/', '_blank');
+});
 
-Segue abaixo um exemplo do uso de event.target:
-*/
+function clickTech (evento) {
+  const change = document.getElementsByClassName("tech");
+  change[0].classList.remove('tech');
+  evento.target.className = "tech";
+  input.value = "";
+}
+
+myWebpage.addEventListener('mouseover', function(event) {
+    event.target.style.color = 'orange';
+  });
+  
+  myWebpage.addEventListener('mouseout', function(event) {
+    event.target.style.color = 'unset';
+  });
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
