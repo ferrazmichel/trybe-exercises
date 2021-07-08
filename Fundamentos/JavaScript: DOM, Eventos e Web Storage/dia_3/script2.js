@@ -59,3 +59,78 @@ function clickFeriado () {
         }
     }
 }
+
+function createFridayButton(buttonName) {
+    let buttonContainer = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newButtonID = 'btn-friday';
+  
+    newButton.innerHTML = buttonName;
+    newButton.id = newButtonID;
+    buttonContainer.appendChild(newButton);
+  };
+  
+  createFridayButton('Sexta-feira');
+
+
+const getFridayButton = document.querySelector('#btn-friday');
+getFridayButton.addEventListener('click', displayFridays);
+
+function displayFridays(fridaysArray) {
+    
+    let fridays = document.getElementsByClassName('day friday');
+    let newFridayText = 'SEXTOU o/';
+  
+    
+    for (let index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].innerHTML !== newFridayText) {
+          fridays[index].innerHTML = newFridayText;
+      } else {
+          fridays[index].innerHTML = fridaysArray[index];
+        }
+      }
+    }
+
+function dayMouseOver() {
+    let days = document.querySelector('#days');
+    
+    days.addEventListener('mouseover', function(event) {
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '600';
+    })
+};
+    
+function dayMouseOut() {
+    let days = document.querySelector('#days');
+    
+    days.addEventListener('mouseout', function(event) {
+        event.target.style.fontWeight = '200';
+        event.target.style.fontSize = '20px';
+    })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+function newTaskSpan(task) {
+
+    let tasksContainer = document.querySelector('.my-tasks');
+    let taskName = document.createElement('span');
+  
+    taskName.innerHTML = task;
+    tasksContainer.appendChild(taskName);
+  };
+  
+newTaskSpan('Projeto:');
+
+  function newTaskDiv(color) {
+
+    let tasksContainer = document.querySelector('.my-tasks');
+    let newTask = document.createElement('div');
+  
+    newTask.className = 'task';
+    newTask.style.backgroundColor = color;
+    tasksContainer.appendChild(newTask);
+  };
+  
+  newTaskDiv('green');
