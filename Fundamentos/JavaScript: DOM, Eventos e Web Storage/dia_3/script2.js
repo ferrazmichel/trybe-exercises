@@ -31,3 +31,31 @@ for (let i = 0; i < feriado.length; i += 1) {
         feriado[i].classList.add("holiday");
     }
 }
+
+for (let i = 0; i < feriado.length; i += 1) {
+    let check = feriado[i].innerText;
+    if (check == 4 || check == 11 || check == 18 || check == 25) {
+        feriado[i].classList.add("friday");
+    }
+}
+
+function holiday (string) {
+    const botao = document.querySelector(".buttons-container");
+    let but = document.createElement("button");
+    but.innerText = string;
+    but.className = "btn-holiday";
+    botao.appendChild(but);
+}
+
+holiday("Feriados");
+
+const botaoFeriado = document.querySelector(".btn-holiday");
+botaoFeriado.addEventListener("click", clickFeriado)
+
+function clickFeriado () {
+    for (let i = 0; i < feriado.length; i += 1) {
+        if (feriado[i].className == "day holiday" || feriado[i].className == "day holiday friday") {
+            feriado[i].style.backgroundColor = "blue";
+        }
+    }
+}
