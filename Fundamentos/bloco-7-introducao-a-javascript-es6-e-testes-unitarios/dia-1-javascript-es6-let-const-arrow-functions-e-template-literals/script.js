@@ -34,3 +34,7 @@ const fatorial = number => {
   console.log(result);
 }  
 fatorial(6);
+
+// Exercicios Parte 2
+// Exercicio 4
+
