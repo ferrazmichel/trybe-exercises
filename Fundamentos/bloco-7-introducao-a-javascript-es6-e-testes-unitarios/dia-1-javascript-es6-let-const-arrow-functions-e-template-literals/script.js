@@ -37,4 +37,14 @@ fatorial(6);
 
 // Exercicios Parte 2
 // Exercicio 4
+const exerc4 = ('Bebeto') => {
+  const strDeterm = 'Tryber x aqui';
+  const str = string;
+  strDeterm.split(' ');
+  for (const i of strDeterm) {
+    strDeterm[i] === 'x' ? strDeterm[i] = str : strDeterm[i] = strDeterm[i];
+  }
+  console.log(strDeterm);
+}
 
+exerc4('Bebeto');
