@@ -1,1 +1,1 @@
-Teste 1 2 3
+GitHub contendo os exercicios do curso, bem como os projetos já realizados!

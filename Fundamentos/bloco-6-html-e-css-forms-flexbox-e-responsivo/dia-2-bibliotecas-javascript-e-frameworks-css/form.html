@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+		<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+<body>
+  <header>Cadastre seu currículo</header>
+  <form action="" method="GET">
+		<fieldset>
+			<label class="form-label" for="nome">Nome Completo:</label>
+			<input type="text" name="nome" id="nome" required maxlength="40" class="form-text">
+			<br>
+			<br>
+			<label class="form-label" for="email">E-mail:</label>
+			<input type="text" name="email" id="email" required maxlength="50" class="form-text">
+			<br>
+			<br>
+			<label class="form-label" for="estado">Estado:</label>
+			<select class="form-select" name="estado" id="estado">
+			</select>
+			<br>
+			<br>
+			<input class="form-check-input" type="radio" name="tipoMoradia" id="tipoMoradia" required>Casa
+			<input class="form-check-input" type="radio" name="tipoMoradia" id="tipoMoradia2" required>Apartamento
+		</fieldset>
+		<fieldset>
+			<label class="form-label" for="resumo">Resumo do seu currículo: </label><textarea name="resumoCurriculo" id="resumo" cols="30" rows="10"></textarea>
+			<br>
+			<br>
+			<label class="form-label" for="data">Insira a data de início no formato dd/mm/aaaa:</label><input type="text" id="data" maxlength="10">
+		</fieldset>
+
+  </form>
+	<script src="script.js"></script>
+	<script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/pikaday/pikaday.js"></script>
+	<script>
+    var picker = new Pikaday({ field: document.getElementById('data') });
+	</script>
+</body>
+</html>
