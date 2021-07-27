@@ -34,3 +34,18 @@ const fatorial = number => {
   console.log(result);
 }  
 fatorial(6);
+
+// Exercicios Parte 2
+// Exercicio 4
+const exerc4 = (string) => {
+  let strDeterm = 'Tryber x aqui';
+  const str = string;
+  let arrayS = strDeterm.split('');
+  for (const i in arrayS) {
+    arrayS[i] === 'x' ? arrayS[i] = str : null;
+  }
+  const result = arrayS.join('');
+  console.log(result);
+}
+
+exerc4('Bebeto');
