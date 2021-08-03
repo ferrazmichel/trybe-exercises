@@ -63,4 +63,11 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = false;
+
+function authorUnique() {
+  // escreva seu código aqui
+  
+}
+
+assert.strictEqual(authorUnique(), expectedResult);

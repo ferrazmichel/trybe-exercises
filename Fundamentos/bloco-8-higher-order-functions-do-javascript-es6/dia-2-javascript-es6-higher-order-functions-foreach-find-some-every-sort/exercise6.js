@@ -64,20 +64,11 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
+const expectedResult = true;
 
-function getNamedBook() {
+function someBookWasReleaseOnThe80s() {
   // escreva seu código aqui
-  return books.find(book => book.name.length === 26);
+  return books.some(book => book.releaseYear >= 1980 && book.releaseYear < 1990)
 }
 
-assert.deepStrictEqual(getNamedBook(), expectedResult);
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
