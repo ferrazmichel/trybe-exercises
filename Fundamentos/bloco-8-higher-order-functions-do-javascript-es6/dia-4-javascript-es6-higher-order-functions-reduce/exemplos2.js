@@ -53,7 +53,7 @@ const estudantes = [
     idade: 14,
     turno: 'Manhã',
     materias: [
-      { name: 'Matemática', nota: 70 },
+      { name: 'Matemática', nota: 80 },
       { name: 'Português', nota: 70 },
       { name: 'Química', nota: 60 },
       { name: 'Biologia', nota: 50 },
@@ -72,3 +72,11 @@ const estudantes = [
     ],
   },
 ];
+
+const studentReport = (Materia1, Materia2) => {
+  if (Materia1.nota > Materia2.nota) return Materia1;
+  return Materia2;
+};
+
+
+console.log(estudantes.map((student) => `${student.nome}, sua melhor nota foi em ${student.materias.reduce(studentReport).name}`));
