@@ -1,0 +1,27 @@
+body {
+  margin: 1em;
+}
+
+img {
+  max-width: 300px;
+}
+
+h5 {
+  font-size: 30px;
+  word-wrap: normal;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid black 1px;
+  margin: 5px;
+  padding: 15px;
+}
+
+.col-sm-4 {
+  width: 330px;
+  border: solid black 1px;
+  margin: 5px;
+  padding: 15px;
+}
