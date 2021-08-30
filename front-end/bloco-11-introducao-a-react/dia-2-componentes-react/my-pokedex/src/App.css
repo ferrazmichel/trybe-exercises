@@ -1,0 +1,26 @@
+.allPoke {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 20px;
+
+}
+
+.eachPoke {
+  border: solid 1px black;
+  border-radius: 20px;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.textPoke {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
